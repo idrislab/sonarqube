@@ -11,7 +11,7 @@ RUN apk --update add \
 ENV TZ=Europe/Lisbon
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-ADD http://sonarsource.bintray.com/Distribution/sonar-php-plugin/sonar-php-plugin-2.8.jar "/opt/sonarqube/extensions/plugins"
+ADD https://sonarsource.bintray.com/Distribution/sonar-php-plugin/sonar-php-plugin-2.9.0.1664.jar "/opt/sonarqube/extensions/plugins"
 ADD https://sonarsource.bintray.com/Distribution/sonar-github-plugin/sonar-github-plugin-1.3.jar "/opt/sonarqube/extensions/plugins"
 
 ENV SONAR_SCANNER_VERSION=2.8
